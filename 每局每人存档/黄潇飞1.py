@@ -188,13 +188,21 @@ def txt(name,text):
     file=open('List.txt','a')
     file.write(text+'  ')
     file.close()
-    
+def checkStorage(result):
+    #查看存档
+    if result == 'yes':
+        username=(input("Your old name is:"))
+        file=open(username+'.txt','r')
+        print(username+' '+file.read())
+        
+  
     
 
 
 
 print('Welcome to Tic Tac Toe!')
-username=input("Your name is:")
+checkStorage(input("Would you like to view the archive:('yes'or'no') "))
+username=input("Your new name is:")
 print("Welcome!",username)
 txt(username,username)
 while True:
