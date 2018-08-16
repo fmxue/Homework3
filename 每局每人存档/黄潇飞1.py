@@ -175,7 +175,7 @@ def gameArchive(name):
         else:
             if winner == 'computer':
                 f=open(username+'.txt','a')
-                f.write('0 ')
+                f.write('-1 ')
                 f.close()
         
 def txt(name,text):
@@ -194,7 +194,9 @@ def checkStorage(result):
         username=(input("Your old name is:"))
         file=open(username+'.txt','r')
         print(username+' '+file.read())
-        
+def checkExist(username):
+    if not os.path.exists(username+'.txt'):
+        txt(username,username)
   
     
 
@@ -204,7 +206,7 @@ print('Welcome to Tic Tac Toe!')
 checkStorage(input("Would you like to view the archive:('yes'or'no') "))
 username=input("Your new name is:")
 print("Welcome!",username)
-txt(username,username)
+checkExist(username)
 while True:
     # 更新棋盘
     theBoard = [' '] * 10
