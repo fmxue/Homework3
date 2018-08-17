@@ -205,7 +205,7 @@ def checkStorage(result):
 
 
 def checkExist(username):
-    #查看用户名是否存在
+    #查看存档
     if not os.path.exists(username+'.txt'):
         txt(username,username)
  
