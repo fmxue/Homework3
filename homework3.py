@@ -36,7 +36,7 @@ def inputPlayerLetter():
  
 def whoGoesFirst():
     # 决定谁先走
-    print("Who goes first?")
+    print("Who goes first?(I:player  or  U:computer)")
     Gofirst=input().upper()
     while 1:
         if Gofirst=='U':
@@ -44,7 +44,7 @@ def whoGoesFirst():
         elif Gofirst=='I':
             return 'player'
         else:
-            print("Who goes first?")
+            print("Who goes first?(I:player  or  U:computer)")
             Gofirst=input().upper()
             continue
         
