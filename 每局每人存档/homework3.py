@@ -134,7 +134,7 @@ def getComputerMove(board, computerLetter):
                 return i
  
  
-    # 判断玩家下一次落子能否获得胜利，如果能，给它堵上
+    # 判断玩家下一次落子能否获得胜利，如果能，落子
     for i in range(1, 10):
         copy = getBoardCopy(board)
         if isSpaceFree(copy, i):
@@ -194,13 +194,18 @@ def txt(name,text):
     file=open('List.txt','a')
     file.write(text+'  ')
     file.close()
+
+
 def checkStorage(result):
     #查看存档
     if result == 'yes':
         username=(input("Your old name is:"))
         file=open(username+'.txt','r')
         print(username+' '+file.read())
+
+
 def checkExist(username):
+    #查看用户名是否存在
     if not os.path.exists(username+'.txt'):
         txt(username,username)
  
