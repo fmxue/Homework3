@@ -18,7 +18,10 @@ def drawBoard(board):
     print('\t\t\t│'+board[1]+' │'+board[2]+' │'+board[3]+' │')
     print('\t\t\t└──┴──┴──┘')
  
- 
+def saveBoard(savings,board):
+    for i in range(1,10):
+        savings[i] = board[i]
+
 def inputPlayerLetter():
     # 让玩家选择棋子
     # 返回一个列表，第一个是玩家的棋子，第二个是电脑的
